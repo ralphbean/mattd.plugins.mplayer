@@ -20,25 +20,24 @@ def get_description():
 
 requires = [
     'mattd.core',
-    'taskw',
 ]
 
 setup(
-    name='mattd.plugins.taskwarrior',
+    name='mattd.plugins.mplayer',
     version='0.0.3',
-    description="Taskwarrior plugin for mattd",
+    description="MPlayer plugin for Matt Daemon",
     long_description = get_description(),
     install_requires=requires,
     url = "http://mattd.rtfd.org/",
     author='Ralph Bean',
     author_email='rbean@redhat.com',
     license='AGPLv3+',
-    packages = ['mattd', 'mattd.plugins', 'mattd.plugins.taskwarrior'],
+    packages = ['mattd', 'mattd.plugins', 'mattd.plugins.mplayer'],
     namespace_packages = ['mattd', 'mattd.plugins',],
     include_package_data=True,
     zip_safe=False,
     entry_points="""
     [mattd.plugins]
-    taskwarrior = mattd.plugins.taskwarrior:TaskwarriorPlugin
+    mplayer = mattd.plugins.mplayer:MPlayerPlugin
     """,
 )

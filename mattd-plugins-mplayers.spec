@@ -1,9 +1,9 @@
-%global modname mattd.plugins.taskwarrior
+%global modname mattd.plugins.mplayer
 
-Name:           mattd-plugins-taskwarrior
+Name:           mattd-plugins-mplayer
 Version:        0.0.1
 Release:        1%{?dist}
-Summary:        Taskwarrior plugin for Matt Daemon
+Summary:        MPlayer plugin for Matt Daemon
 Group:          Applications/Internet
 License:        AGPLv3+
 URL:            http://mattd.rtfd.org/
@@ -16,14 +16,11 @@ BuildRequires:  mattd
 
 Requires:       mattd
 Requires:       espeak
-Requires:       task
-Requires:       python-taskw
-Requires;       python-sh
+Requires:       mplayer
+Requires:       python-sh
 
 %description
-Taskwarrior plugin for Matt Daemon.  Speak aloud reminders for yourself.
-
-For the terminally scatter-brained.
+MPlayer plugin for Matt Daemon.  Rock James Brown on command!
 
 %prep
 %setup -q -n %{modname}-%{version}
