@@ -1,7 +1,7 @@
 %global modname mattd.plugins.mplayer
 
 Name:           mattd-plugins-mplayer
-Version:        0.0.1
+Version:        0.0.3
 Release:        1%{?dist}
 Summary:        MPlayer plugin for Matt Daemon
 Group:          Applications/Internet
@@ -39,5 +39,5 @@ MPlayer plugin for Matt Daemon.  Rock James Brown on command!
 %{python_sitelib}/%{modname}-%{version}-py*.egg-info/
 
 %changelog
-* Fri Aug 24 2012 Ralph Bean <rbean@redhat.com> - 0.0.1-1
+* Fri Aug 24 2012 Ralph Bean <rbean@redhat.com> - 0.0.3-1
 - Initial packaging.
