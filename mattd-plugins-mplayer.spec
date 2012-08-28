@@ -1,7 +1,7 @@
 %global modname mattd.plugins.mplayer
 
 Name:           mattd-plugins-mplayer
-Version:        0.0.4
+Version:        0.0.6
 Release:        1%{?dist}
 Summary:        MPlayer plugin for Matt Daemon
 Group:          Applications/Internet
@@ -32,18 +32,22 @@ MPlayer plugin for Matt Daemon.  Declare victory and play your theme song!
 %install
 %{__python} setup.py install -O1 --skip-build \
     --install-data=%{_datadir} --root %{buildroot}
-%{__cp} mattd.d/mplayer.ini %{buildroot}%{_sysconfdir}/mattd.d/.
 
+%{__mkdir_p} %{buildroot}%{_datadir}/mattd/mplayer
+%{__cp} data/trololo.ogg  %{buildroot}%{_datadir}/mattd/mplayer/.
+%{__mkdir_p} %{buildroot}%{_sysconfdir}/mattd.d
+%{__cp} production.ini %{buildroot}%{_sysconfdir}/mattd.d/mplayer.ini
 
 %files
 %doc README.rst LICENSE
 
 %config(noreplace) %{_sysconfdir}/mattd.d/mplayer.ini
+%{_datadir}/mattd/mplayer/trololo.ogg
 
 %{python_sitelib}/mattd/plugins/mplayer
 %{python_sitelib}/%{modname}-%{version}-py*.egg-info/
 %{python_sitelib}/%{modname}-%{version}-py*.pth
 
 %changelog
-* Fri Aug 24 2012 Ralph Bean <rbean@redhat.com> - 0.0.4-1
+* Fri Aug 24 2012 Ralph Bean <rbean@redhat.com> - 0.0.6-1
 - Initial packaging.

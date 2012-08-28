@@ -27,7 +27,7 @@ requires = [
 
 setup(
     name='mattd.plugins.mplayer',
-    version='0.0.5',
+    version='0.0.6',
     description="MPlayer plugin for Matt Daemon",
     long_description=get_description(),
     install_requires=requires,
